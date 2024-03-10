@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Explanation</title>
+</head>
+<body>
+    <h2>Explanation</h2>
+    <p>{{ explanation }}</p>
+    <h3>Explore More</h3>
+    <ul>
+        {% for prompt in prompts %}
+            <form action="/handle_prompt" method="post">
+                <input type="hidden" name="prompt" value="{{ prompt }}">
+                <li><button type="submit">{{ prompt }}</button></li>
+            </form>
+        {% endfor %}
+    </ul>
+</body>
+</html>
