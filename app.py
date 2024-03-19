@@ -5,7 +5,7 @@ import io
 import openai
 
 app = Flask(__name__)
-openai.api_key = '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'
+openai.api_key = ''
 
 @app.route('/', methods=['GET'])
 def home():
